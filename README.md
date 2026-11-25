@@ -19,8 +19,3 @@ Dashboard pemantauan dan optimisasi lama lampu hijau di simpang Mirota (ruas Uta
 - **Kimia:** menghitung emisi CO₂ dan gas lain saat kendaraan antre, lalu merekomendasikan vegetasi untuk menyerap emisi di sekitar simpang.
 - **Ilmu Komputer:** memprogram perhitungan kebutuhan, hijau usulan, dan status kestabilan simpang dalam C++ berdasarkan model Matematika, sehingga hasilnya bisa dijalankan ulang.
 
-## Cara membuka
-
-Buka `index.html` di browser, atau lewat GitHub Pages. Di layar laptop atau monitor, semua isi tampil dalam satu layar. Di HP dan tablet, halaman bisa di-scroll.
-
-Taruh keempat file di folder yang sama dan jangan ubah nama filenya, supaya tombol unduh di dashboard berfungsi.
