@@ -1098,6 +1098,7 @@ function rumusMat(o){
        K<1?`siklus minimum = ${fr(ALLRED+' detik',`100% − ${pc(K)}`)} = ${R(lan(ALLRED/(1-K))+' detik')}`:'tidak ada siklus yang stabil (total kebutuhan ≥ 100%)'],
       null, `Karena ${ALLRED} detik semua merah selalu terpotong dari setiap siklus, siklus harus lebih dari ${lan(ALLRED/(1-K))} detik agar persentase hijaunya melebihi total kebutuhan.`)}
    </ol>
+   <p class="note" style="margin:-4px 0 0">Acuan: pembagian waktu hijau sebanding rasio arus mengikuti metode Webster, seperti dijelaskan dalam Garber &amp; Hoel (2020), <i>Traffic and Highway Engineering</i>, Bab 8, hlm. 397–399, Persamaan 8.6–8.10.</p>
    <h2 class="judul-besar">Simulasi</h2>
    <p class="note" style="margin:-6px 0 0">Simulasi dijalankan ${ULANG} kali. Setiap simulasi berjalan 1 jam (${DURASI} detik, sekitar ${fmt(DURASI/SIKLUS,0)} siklus) dimulai dari jalan kosong, dengan langkah waktu ${fmt(DT,1)} detik. Lampu hijau bergiliran ${J.join(' → ')}, dengan semua merah ${fmt(ALLRED/J.length,0)} detik di setiap pergantian. Angka hasil ditulis: lampu asli → lampu usulan.</p>
    <ol class="rumus" style="counter-reset:r 7">
@@ -1312,6 +1313,7 @@ const SUMBER=()=>[
   'Value of Time Rp15.000 per kendaraan per jam (asumsi simulasi, bukan hasil survei) dan batas tunggu 60 detik (ambang analisis kelompok): tim Aktuaria.',
   `Laju emisi CO₂ saat mesin diam (motor 534, mobil 2.070, bis 6.700 gram/jam), perbandingan CO, HC, NOₓ, dan daya serap tumbuhan: tabel tim Kimia (${KIMIA.file}).`,
   `Program perhitungan lampu hijau (C++, ${ILKOM.file}): tim Ilmu Komputer.`,
+  'Acuan model pembagian waktu hijau: Garber, N. J., &amp; Hoel, L. A. (2020). <i>Traffic and Highway Engineering</i> (Enhanced 5th ed., SI ed.). Cengage Learning. Bab 8, hlm. 397–399.',
   `Porsi kendaraan (motor ${fmt(KEND[0].porsi*100,0)}%, mobil ${fmt(KEND[1].porsi*100,0)}%, bis ${fmt(KEND[2].porsi*100,0)}%) dan lama kondisi padat: asumsi kelompok.`];
 
 const NS='http://www.w3.org/2000/svg';
